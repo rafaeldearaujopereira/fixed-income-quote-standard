@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_2JzGkI3MEeuld__7ZwYfhQ" name="FixedIncomeQuoteProtocol">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_2JzGkI3MEeuld__7ZwYfhQ" name="FixedIncomeQuoteStandardUML">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_2TM6MI3MEeuld__7ZwYfhQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Nh6xoI3PEeuld__7ZwYfhQ" name="Model">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_So7qkI3WEeuld__7ZwYfhQ" annotatedElement="_rEqy8I3REeuld__7ZwYfhQ">
+      <body>%CDI,&#xD;
+CDI+,&#xD;
+IPCA+,&#xD;
+Fixed-rate&#xD;
+</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_cQ7R0I3REeuld__7ZwYfhQ" name="Quote">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_W8lboI3XEeuld__7ZwYfhQ" name="distributorInterestRate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigDecimal"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VzyLEI3YEeuld__7ZwYfhQ" name="maximumClientRate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigDecimal"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-1PWQI3YEeuld__7ZwYfhQ" name="minimalPurchase"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pRQUkI3REeuld__7ZwYfhQ" name="Product"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_rEqy8I3REeuld__7ZwYfhQ" name="Indexer"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_8DKUYI3REeuld__7ZwYfhQ" client="_pRQUkI3REeuld__7ZwYfhQ" supplier="_rEqy8I3REeuld__7ZwYfhQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BlIIII3SEeuld__7ZwYfhQ" name="Issuer"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_8U36AI3SEeuld__7ZwYfhQ" memberEnd="_8VEHQI3SEeuld__7ZwYfhQ _8VEuUY3SEeuld__7ZwYfhQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8U36AY3SEeuld__7ZwYfhQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8VBrAI3SEeuld__7ZwYfhQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8VEuUY3SEeuld__7ZwYfhQ" type="_BlIIII3SEeuld__7ZwYfhQ" association="_8U36AI3SEeuld__7ZwYfhQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8VEHQI3SEeuld__7ZwYfhQ" type="_pRQUkI3REeuld__7ZwYfhQ" aggregation="shared" association="_8U36AI3SEeuld__7ZwYfhQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oeCLEI3VEeuld__7ZwYfhQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8VEuUI3SEeuld__7ZwYfhQ" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_FOgFwI3WEeuld__7ZwYfhQ" memberEnd="_FOgFw43WEeuld__7ZwYfhQ _FOkXMo3WEeuld__7ZwYfhQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FOgFwY3WEeuld__7ZwYfhQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FOgFwo3WEeuld__7ZwYfhQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_FOkXMo3WEeuld__7ZwYfhQ" type="_pRQUkI3REeuld__7ZwYfhQ" association="_FOgFwI3WEeuld__7ZwYfhQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_FOgFw43WEeuld__7ZwYfhQ" type="_cQ7R0I3REeuld__7ZwYfhQ" aggregation="shared" association="_FOgFwI3WEeuld__7ZwYfhQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OhOOUI3WEeuld__7ZwYfhQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FOkXMY3WEeuld__7ZwYfhQ" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CcLSoI3XEeuld__7ZwYfhQ" name="Distributor"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Gq7LAI3XEeuld__7ZwYfhQ" client="_CcLSoI3XEeuld__7ZwYfhQ" supplier="_cQ7R0I3REeuld__7ZwYfhQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_0lt9UI3PEeuld__7ZwYfhQ" name="Concepts"/>
 </uml:Model>
